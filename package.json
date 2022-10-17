@@ -1,0 +1,30 @@
+{
+  "name": "vue-login",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "server:dev": "json-server --watch src/server/db.json",
+    "dev": "concurrently \"vite\" \"yarn server:dev\"",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@types/js-cookie": "^3.0.2",
+    "hash.js": "^1.1.7",
+    "js-cookie": "^3.0.1",
+    "json-server": "^0.17.0",
+    "vue": "^3.2.37",
+    "vue-toastification": "^2.0.0-rc.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^3.1.0",
+    "autoprefixer": "^10.4.12",
+    "concurrently": "^7.4.0",
+    "postcss": "^8.4.18",
+    "tailwindcss": "^3.1.8",
+    "typescript": "^4.6.4",
+    "vite": "^3.1.0",
+    "vue-tsc": "^0.40.4"
+  }
+}
