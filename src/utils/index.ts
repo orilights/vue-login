@@ -25,5 +25,5 @@ export function getRandomString(len: number) {
 }
 
 export function passwordHash(pwd: string, salt: string): string {
-    return cryptojs.PBKDF2(pwd, cryptojs.MD5(salt)).toString()
+    return cryptojs.PBKDF2(pwd, cryptojs.MD5(salt), { keySize: 48, iterations: 10 }).toString()
 }
