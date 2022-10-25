@@ -14,7 +14,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, onMounted, ref } from 'vue';
+import { computed, ref } from 'vue';
 import router from '@/router';
 import { useStore } from '@/stores';
 import { useToast } from 'vue-toastification';
@@ -29,15 +29,6 @@ let re = new RegExp('^[a-z0-9-_]{5,15}$')
 const vaildUserId = computed(() => re.test(userId.value) || userId.value == '')
 const userId = ref('')
 const userPwd = ref('')
-
-onMounted(() => {
-    if (Cookies.get('login') == '1') {
-        store.login = true
-        store.userId = Cookies.get('userid') || '获取昵称失败'
-        store.userName = Cookies.get('username') || '获取昵称失败'
-        router.push('/home')
-    }
-})
 
 function showTip() {
     toast.info('用户名仅支持小写字母、数字、横杠、下划线组合，长度5-15字符', { timeout: 10000 })
