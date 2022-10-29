@@ -1,6 +1,6 @@
 import { passwordHash } from "../utils"
 
-const apiUrl = 'http://123.60.44.50:3000/users/'
+const apiUrl = 'https://db.api.orght.cn/users/'
 
 export interface RequestResult {
     code: number,

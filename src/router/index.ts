@@ -4,8 +4,6 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 
 import routes from './routes'
 
-
-
 const router = createRouter({
     history: createWebHashHistory(),
     routes,
@@ -20,7 +18,6 @@ router.beforeEach((to, from) => {
     }
     if (to.path != '/login' && to.path != '/404' ) {
         if (!store.login) {
-            console.log(3);
             if (Cookies.get('login') == '1') {
                 store.login = true
                 store.userId = Cookies.get('userid') || '获取昵称失败'
