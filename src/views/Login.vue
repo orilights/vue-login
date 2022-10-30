@@ -44,8 +44,8 @@ async function userLogin() {
         store.userId = userId.value
         store.userName = result.msg
         Cookies.set('login', '1', { expires: 7 })
-        Cookies.set('userid', userId.value)
-        Cookies.set('username', result.msg)
+        Cookies.set('userid', userId.value, { expires: 7 })
+        Cookies.set('username', result.msg, { expires: 7 })
         Cookies.set('token', Utils.getRandomString(30), { expires: 7 })
         router.push('/home')
     } else if (result.code = 2) {
