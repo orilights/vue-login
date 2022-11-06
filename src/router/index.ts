@@ -11,21 +11,21 @@ const router = createRouter({
 
 router.beforeEach((to, from) => {
     const store = useStore()
-    if (to.path == '/login') {
+    if (!store.login) {
+        if (Cookies.get('login') == '1') {
+            store.login = true
+            store.userId = Cookies.get('userid') || '获取昵称失败'
+            store.userName = Cookies.get('username') || '获取昵称失败'
+        }
+    }
+    if (to.path == '/login' || to.path == '/register') {
         if (store.login) {
             return '/home'
         }
     }
-    if (to.path != '/login' && to.path != '/404' ) {
+    if (to.path != '/login' && to.path != '/404' && to.path != '/register') {
         if (!store.login) {
-            if (Cookies.get('login') == '1') {
-                store.login = true
-                store.userId = Cookies.get('userid') || '获取昵称失败'
-                store.userName = Cookies.get('username') || '获取昵称失败'
-                return to
-            } else {
-                return '/login'
-            }
+            return '/login'
         }
     }
 })

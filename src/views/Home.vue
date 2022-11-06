@@ -1,4 +1,5 @@
 <template>
+    <p class="text-center font-semibold text-xl mb-6">用户主页</p>
     <p class="mb-2">欢迎：{{ userName }}</p>
     <p class="mb-4">IP地址：{{ ip }}</p>
     <button class="transition-colors px-4 py-1 mr-2 border-black border rounded-lg hover:bg-black hover:text-white"
