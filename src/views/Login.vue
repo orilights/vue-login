@@ -7,7 +7,7 @@
             @click="userLogin">登录</button>
         <RouterLink to="/register">
             <button
-                class="transition-colors px-4 py-1 mr-2 border-black border rounded-lg hover:bg-black hover:text-white">注册</button>
+                class="transition-colors px-4 py-1 mr-2 border-black border rounded-lg hover:bg-black hover:text-white">前往注册&gt;</button>
         </RouterLink>
     </div>
 </template>

@@ -9,7 +9,7 @@
     <div class="button-group mt-6 flex justify-center">
         <RouterLink to="/login">
             <button
-                class="transition-colors px-4 py-1 mr-2 border-black border rounded-lg hover:bg-black hover:text-white">返回</button>
+                class="transition-colors px-4 py-1 mr-2 border-black border rounded-lg hover:bg-black hover:text-white">&lt;返回登录</button>
         </RouterLink>
         <button class="transition-colors px-4 py-1 mr-2 border-black border rounded-lg hover:bg-black hover:text-white"
             @click="userRegister">注册</button>
